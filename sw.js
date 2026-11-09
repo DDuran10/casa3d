@@ -1,6 +1,6 @@
 // Service worker: guarda la app para que funcione sin conexión.
 // Sube VERSION cada vez que publiques cambios para que los móviles descarguen la nueva versión.
-const VERSION = 'casa3d-v3';
+const VERSION = 'casa3d-v4';
 const APP = [
   './',
   './index.html',
@@ -12,6 +12,8 @@ const APP = [
   './vendor/three/three.module.js',
   './vendor/three/addons/controls/OrbitControls.js',
   './vendor/three/addons/renderers/CSS2DRenderer.js',
+  './vendor/three/addons/loaders/GLTFLoader.js',
+  './vendor/three/addons/utils/BufferGeometryUtils.js',
 ];
 
 self.addEventListener('install', e => {

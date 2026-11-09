@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Descargar Mi casa 3D</title>
+<link rel="icon" href="icon-192.png" type="image/png">
+<style>
+:root{--bg:#eef0ec;--panel:#f9faf7;--line:#d5d9d0;--ink:#1c2330;--muted:#5f6876;--accent:#2d55c8;--accent-ink:#fff;color-scheme:light}
+@media (prefers-color-scheme: dark){:root{--bg:#13161b;--panel:#1a1e24;--line:#2c323b;--ink:#e6e9ee;--muted:#9aa3b0;--accent:#7f9cff;--accent-ink:#0f1320;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:max(16px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom))}
+main{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;gap:14px;align-items:center}
+header img{width:64px;height:64px;border-radius:16px}
+h1{font-size:22px;margin:0}
+.sub{color:var(--muted);margin:2px 0 0;font-size:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.dl{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:18px;padding:16px;border-radius:12px;min-height:56px}
+.meta{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
+ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px}
+li b{font-weight:600}
+.k{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:0 6px;background:var(--bg);font-size:14px;white-space:nowrap}
+h2{font-size:16px;margin:0 0 10px}
+.note{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon-192.png" alt="">
+    <div><h1>Mi casa 3D</h1><p class="sub">App para Android · necesitas la contraseña que te han dado</p></div>
+  </header>
+
+  <div class="card">
+    <a class="dl" id="dl" href="mi-casa-3d.apk" download>⬇ Descargar la app</a>
+    <div class="meta" id="meta">Archivo de unos pocos MB</div>
+  </div>
+
+  <div class="card">
+    <h2>Cómo instalarla (solo la primera vez)</h2>
+    <ol>
+      <li>Pulsa <b>«Descargar la app»</b>. Si el móvil pregunta, elige <span class="k">Descargar</span> o <span class="k">Descargar de todos modos</span>.</li>
+      <li>Cuando termine, toca la notificación <b>«mi-casa-3d.apk»</b> (o ábrelo desde <b>Descargas</b>).</li>
+      <li>La primera vez Android avisa de que no permite instalar apps de esta fuente: toca <span class="k">Ajustes</span>, activa <span class="k">Permitir de esta fuente</span> y vuelve atrás.</li>
+      <li>Toca <span class="k">Instalar</span>. Si sale un aviso de Play Protect, toca <span class="k">Más detalles</span> → <span class="k">Instalar de todos modos</span>. Sale porque la app no viene de Google Play.</li>
+      <li>Abre <b>Mi casa 3D</b>, escribe la contraseña y tu nombre. ¡Listo!</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Actualizaciones</h2>
+    <p class="note">La app se actualiza sola. Si alguna vez hace falta instalar una versión nueva, la propia app te lo dirá con un botón «Descargar»: repites los pasos 2 y 4.</p>
+  </div>
+
+  <p class="note">¿Tienes iPhone? Abre <a href="../">la versión web</a> en Safari y elige Compartir → «Añadir a pantalla de inicio».</p>
+</main>
+<script>
+fetch('version.json', { cache: 'no-store' }).then(r => r.json()).then(v => {
+  document.getElementById('meta').textContent = 'Versión ' + v.version + ' · ' + (v.size / 1e6).toFixed(1) + ' MB · ' + new Date(v.date).toLocaleDateString('es-ES');
+}).catch(() => {});
+</script>
+</body>
+</html>

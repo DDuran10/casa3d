@@ -1,6 +1,6 @@
 // Service worker: guarda la app para que funcione sin conexión.
 // Sube VERSION cada vez que publiques cambios para que los móviles descarguen la nueva versión.
-const VERSION = 'casa3d-v12';
+const VERSION = 'casa3d-v13';
 const APP = [
   './',
   './index.html',
